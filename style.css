@@ -19,21 +19,55 @@ header {
     border-bottom: 1px solid #334155;
 }
 
+nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+nav img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 15px 0 0;
+    border: 2px solid #38bdf8;
+    filter:none;
+}
+
+nav h1{
+    font-size: 1.2rem;
+    margin:0;
+    color: #38dbf8;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-right: auto;
+}
+
 nav ul {
     display: flex;
-    justify-content: center;
     list-style: none;
     padding: 0;
+    margin: 0;
+    gap: 20px;
+    grid-template-columns: none;
 }
 
 nav ul li { 
-    margin: 0 15px; 
+    background: transparent;
+    margin: 0;
+    padding:0; 
+
 }
 
 nav ul li a {
             color: #f8fafc;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.85rem;
             transition: color 0.3s;
         }
 
