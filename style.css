@@ -239,3 +239,58 @@ footer p {
     font-size: 0.85rem;
     margin-top: 10px;
 }
+
+/*modo claro*/
+.theme-btn {
+    background-color: #38bdf8; 
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 15px;
+}
+
+body.light-mode {
+    background-color: #f1f5f9; 
+    color: #1e293b;           
+}
+
+body.light-mode li, 
+body.light-mode form {
+    background-color: #ffffff; 
+    border: 1px solid #e2e8f0; /
+}
+
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3,
+body.light-mode label {
+    color: #0284c7;           
+}
+
+body.light-mode header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+body.light-mode nav ul li a {
+    color: #1e293b; 
+    margin:10px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    nav h1 {
+        margin-right: 0;
+    }
+}
