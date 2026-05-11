@@ -6,12 +6,12 @@ const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme === 'light') {
     body.classList.add('light-mode');
-    themeToggle.textContent = '☀️'; // Icono de sol para modo claro
+    themeToggle.textContent = '☀️';
 }
 
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('light-mode');
-    
+
     let theme = 'dark';
     if (body.classList.contains('light-mode')) {
         theme = 'light';
@@ -19,6 +19,6 @@ themeToggle.addEventListener('click', () => {
     } else {
         themeToggle.textContent = '🌙';
     }
-    
+
     localStorage.setItem('theme', theme);
 });
