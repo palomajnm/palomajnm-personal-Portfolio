@@ -137,41 +137,34 @@ img {
 }
 
 #proyectos li {
-    background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
-    padding: 0;
-    list-style: none; /* Asegura que no salgan puntos de lista */
-    border: 1px solid transparent; /* Base para el hover */
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 12px;
+    padding: 10px;
     transition: all 0.3s ease;
 }
 
 #proyectos li:hover {
-    border-color: #38bdf8;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-8px);}
+    border-color: #38bdf8; 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+}
 
 #proyectos li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    /* 1. Ajuste de dimensiones */
     width: 100%;
     min-height: 150px;
-    box-sizing: border-box; /* Crucial: incluye el padding dentro del ancho del 100% */
-    
-    /* 2. Separación de 1cm (aprox 38px) a todos los lados */
+    box-sizing: border-box; 
     padding: 38px; 
-    margin: 0; /* Eliminamos el margin para que no empuje la caja fuera del li */
-    
-    /* 3. Estética y tipografía */
+    margin: 0; 
     color: #f8fafc;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-align: center;
-    
-    /* 4. Gestión de texto largo */
-    overflow-wrap: break-word; /* Alternativa moderna a word-wrap */
+    overflow-wrap: break-word; 
     line-height: 1.5;
     transition: color 0.3s ease;
 }
@@ -303,22 +296,21 @@ body.light-mode label {
     color: #0284c7;
 }
 
-/* Ajustes para el Header en Modo Claro */
 body.light-mode header {
     background-color: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid #e2e8f0;
 }
 
 body.light-mode nav ul li a {
-    color: #1e293b; /* Color oscuro para el texto */
+    color: #1e293b; 
     font-weight: 700;
     padding: 5px 10px;
     transition: color 0.3s ease;
 }
 
 body.light-mode nav ul li a:hover {
-    color: #0284c7; /* Color azul al pasar el ratón */
-    background: transparent; /* Aseguramos que no salga ningún fondo */
+    color: #0284c7; 
+    background: transparent; 
 }
 
 /* --- RESPONSIVE --- */
@@ -337,4 +329,99 @@ body.light-mode nav ul li a:hover {
     nav h1 {
         margin-right: 0;
     }
+}
+
+/*estilos para el formulario de estudios*/
+#estudios{
+    padding: 80px 20px;
+}
+
+#formularioEstudios{
+    background: rgba(30, 41, 59, 0.5); 
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    text-align: left;
+}
+
+#formularioEstudios label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: -5px;
+    color: #38bdf8;
+}
+
+#formularioEstudios input, 
+#formularioEstudios textarea {
+    background: #0f172a;
+    border: 1px solid #334155;
+    padding: 12px 15px;
+    color: #f8fafc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#formularioEstudios input:focus, 
+#formularioEstudios textarea:focus {
+    border-color: #38bdf8;
+    outline: none;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+
+
+#estudios-lista ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+#btn-añadir{
+    margin-top: 10px;
+    background: linear-gradient(90deg, #10b981, #38bd38); /* Un degradado verde vibrante */
+    color: white;
+    font-weight: 800;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#btn-añadir:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+#estudios-lista li h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+#estudios-lista li p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+#estudios-lista li strong {
+    color: #38bdf8;
+}
+
+#contenedor-formulario {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+#toggle-form-btn {
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Montserrat', sans-serif;
 }

@@ -29,17 +29,44 @@
     <main>
         <section id="inicio">
             <h1>Hola soy Paloma JNM</h1>
-            <p>Actualmente soy estudiante de Desarrollo de Aplicaciones Web (DAW).
-                Cuento con una base técnica sólida tras haber obtenido el título de Técnica en Sistemas
-                Microinformáticos y Redes (SMR),
-                lo que me brindó una visión integral de la infraestructura tecnológica.</p>
+            <p><strong>Desarrolladora Web en formación con ADN de sistemas.</strong></p>
+            <p>Tras consolidar mi base técnica en infraestructuras y redes, hoy enfoco mi energía en crear 
+            experiencias digitales eficientes y escalables. Mi objetivo es fusionar la robustez técnica 
+            con interfaces intuitivas.</p>
         </section>
 
         <section id="sobre_mi">
             <h2>Sobre mi</h2>
-            <p>Me defino como una persona detallista y metódica. Disfruto del trabajo en equipo, aportando mi capacidad
-                de organización para asegurar que el código y la interfaz mantenga los más altos estándares de calidad
-                visual </p>
+            <p>Me apasiona la intersección entre la <strong>lógica pura</strong> y la <strong>creatividad visual</strong>. 
+            Vengo del mundo de los sistemas (SMR), lo que me dio una mentalidad de resolución de problemas desde la raíz.</p>
+            
+            <p>Como desarrolladora, soy metódica y detallista. No solo me importa que el código funcione, 
+            sino que sea limpio y que la interfaz ofrezca una experiencia impecable. Creo firmemente que un buen 
+            desarrollo nace de la organización y el trabajo colaborativo.</p>
+        </section>
+
+        <section id="estudios">
+            <h2>Formación Académica</h2>
+
+            <button id="toggle-form-btn" class="theme-btn" style="width: auto; border-radius: 8px; margin-bottom: 20px;">
+                + Agregar Nuevo Estudio
+            </button>
+
+            <div id="contenedor-formulario" style="display:none;">
+                <form action="#" method="post" id="formularioEstudios">
+                    <label for="estudio_titulo">Estudios Cursados</label>
+                    <input type="text" id="estudio-titulo" placeholder="Título del estudio">
+                    <label for="estudio-centro">Centro</label>
+                    <input type="text" id="estudio-centro" placeholder="Centro">
+                    <label for="estudio-fecha">Fecha de finalización</label>
+                    <input type="text" id="estudio-fecha" placeholder="2000-2004">
+                    <label for="estudio-desc">Descripción</label>
+                    <textarea id="estudio-desc" placeholder="Descripción breve"></textarea>
+                    <button id="btn-añadir">Añadir a la lista</button>
+                </form>
+            </div>
+
+            <div id="estudios-lista"></div>
         </section>
 
         <section id="proyectos">
