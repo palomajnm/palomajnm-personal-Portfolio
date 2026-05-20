@@ -57,7 +57,7 @@ function mostrarEstudios(){
     contenedor.appendChild(listaUl);
 }
 
-document.getElementById('btn-añadir').addEventListener('click',()=>{
+document.getElementById('btn-añadir').addEventListener('click',(e)=>{
     e.preventDefault();
 
     const titulo = document.getElementById('estudio-titulo').value;
@@ -105,3 +105,45 @@ document.getElementById('btn-añadir').addEventListener('click', () => {
     toggleBtn.textContent = "+ Agregar Nuevo Estudio";
     toggleBtn.style.backgroundColor = "#38bdf8";
 });
+
+//Lógica para mostrar los repositorios de GitHub
+async function obtenerRepositorios(usuario) {
+    const contenedor = document.getElementById('github-repos');
+    
+    try {
+        const respuesta = await fetch(`https://api.github.com/users/${usuario}/repos?sort=updated`);
+        
+        if (!respuesta.ok) {
+            throw new Error("No se pudo obtener la información de GitHub");
+        }
+
+        const repos = await respuesta.json();
+        contenedor.innerHTML = "";
+        const listaUl = document.createElement('ul');
+
+        repos.forEach(repo => {
+
+            if (!repo.fork) {
+                const itemLi = document.createElement('li');
+                itemLi.innerHTML = `
+                    <a href="${repo.html_url}" target="_blank">
+                        <div>
+                            <h3>${repo.name.toUpperCase().replace(/-/g, ' ')}</h3>
+                            <p>${repo.description || "Sin descripción disponible"}</p>
+                            <span style="color: #38bdf8; font-size: 0.8rem;">👍 ${repo.stargazers_count} | 🔄 ${repo.forks_count}</span>
+                        </div>
+                    </a>
+                `;
+                listaUl.appendChild(itemLi);
+            }
+        });
+
+        contenedor.appendChild(listaUl);
+
+    } catch (error) {
+        console.error("Error:", error);
+        contenedor.innerHTML = "<p>Hubo un error al cargar los proyectos de GitHub.</p>";
+    }
+}
+
+obtenerRepositorios("PalomaJNM");
