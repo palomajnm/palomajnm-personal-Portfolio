@@ -56,4 +56,4 @@ Para poner en marcha el proyecto en tu máquina local, sigue estos sencillos pas
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone <Uhttps://github.com/palomajnm/palomajnm-trabajos-formacion>
+   git clone <https://github.com/palomajnm/palomajnm-trabajos-formacion>
